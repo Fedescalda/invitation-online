@@ -60,4 +60,24 @@ body {
     margin-top: -10px;
     color: #888;
   }
-  
+  /* Estilos adicionales para invitation.html */
+#invitation-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#invitation-details p {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+span {
+  color: #555;
+}
