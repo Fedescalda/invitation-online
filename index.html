@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creador de invitaciones online</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Creación de Invitaciones</h1>
+
+    <form action="invitation.html" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" placeholder="Ingrese el nombre" required><br><br>
+
+        <label for="address">Dirección:</label>
+        <input type="text" id="address" placeholder="Ingrese dirección del lugar" required><br><br>
+
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" required><br><br>
+
+        <label for="time">Hora:</label>
+        <input type="time" id="time" required><br><br>
+
+        <label for="cel">Número de Celular:</label>
+        <input type="tel" id="cel" placeholder="Ingrese número donde quiere recibir la confirmación" required>
+        <p class="example">Ejemplo: +1234567890 (sin el 0 y el 15 )</p><br>
+
+        <label for="invitation">Invitación para:</label>
+        <select id="invitation" onchange="ShowTopicField()" required>
+            <option value="none">-</option>
+            <option value="wedding">Boda</option>
+            <option value="party">Fiesta de Cumpleaños</option>
+            <option value="meeting">Reunión Familiar</option>
+        </select><br><br>
+
+        <div id="theme-camp" style="display: none;">
+            <label for="theme">Temática:</label>
+            <input type="text" id="theme" placeholder="Ingresa la temática de la fiesta" required><br><br>
+        </div>
+
+        <input type="submit" value="Crear Invitacion">
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
