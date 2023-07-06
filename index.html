@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Creador de invitaciones online</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
-
 <body>
     <h1>Creación de Invitaciones</h1>
 
-    <form action="invitation.html" method="post">
+    <form onsubmit="event.preventDefault(); generateInvitation();">
         <label for="name">Nombre:</label>
         <input type="text" id="name" placeholder="Ingrese el nombre" required><br><br>
 
@@ -28,7 +27,7 @@
 
         <label for="invitation">Invitación para:</label>
         <select id="invitation" onchange="ShowTopicField()" required>
-            <option value="none">-</option>
+            <option value="">-</option>
             <option value="wedding">Boda</option>
             <option value="party">Fiesta de Cumpleaños</option>
             <option value="meeting">Reunión Familiar</option>
@@ -42,6 +41,4 @@
         <input type="submit" value="Crear Invitacion">
     </form>
 </body>
-<script src="script.js"></script>
-
 </html>
