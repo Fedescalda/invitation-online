@@ -1,6 +1,6 @@
 function ShowTopicField() {
-    var invitationSelect = document.getElementById("invitation");
-    var themeCamp = document.getElementById("theme-camp");
+    let invitationSelect = document.getElementById("invitation");
+    let themeCamp = document.getElementById("theme-camp");
 
     if (invitationSelect.value === "party" || invitationSelect.value === "wedding" || invitationSelect.value === "meeting") {
       themeCamp.style.display = "block";
@@ -8,39 +8,23 @@ function ShowTopicField() {
       themeCamp.style.display = "none";
     }
   }
-  document.addEventListener("DOMContentLoaded", function() {
-    var name = localStorage.getItem("name");
-    var address = localStorage.getItem("address");
-    var date = localStorage.getItem("date");
-    var time = localStorage.getItem("time");
-    var cel = localStorage.getItem("cel");
-    var invitationType = localStorage.getItem("invitationType");
-    var theme = localStorage.getItem("theme");
+  // Obtener los valores de los campos del formulario en index.html
+  const name = document.getElementById("name").value;
+  const address = document.getElementById("address").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const cel = document.getElementById("cel").value;
+  const invitation = document.getElementById("invitation").value;
+  const theme = document.getElementById("theme").value;
 
-    var message = "";
-    var details = "";
-
-    if (invitationType === "wedding") {
-        message = "Te invito a mi boda, " + name;
-    } else if (invitationType === "party") {
-        message = "Te invito a mi fiesta de cumpleaños, " + name;
-    } else if (invitationType === "meeting") {
-        message = "Te invito a nuestra reunión familiar, " + name;
-    }
-
-    details += "Lugar: " + address + "<br>";
-    details += "Fecha: " + date + "<br>";
-    details += "Hora: " + time + "<br>";
-    details += "Número de Celular: " + cel + "<br>";
-
-    if (invitationType === "party") {
-        details += "Temática: " + theme + "<br>";
-    }
-
-    document.getElementById("invitation-message").innerHTML = message;
-    document.getElementById("invitation-details").innerHTML = details;
-});
-
+  // Mostrar los valores en invitation.html
+  document.getElementById("name").textContent = name;
+  document.getElementById("address").textContent = address;
+  document.getElementById("date").textContent = date;
+  document.getElementById("time").textContent = time;
+  document.getElementById("cel").textContent = cel;
+  document.getElementById("invitation").textContent = invitation;
+  document.getElementById("theme").textContent = theme;
 function confirmAttendance() {
     // Aquí puedes implementar la lógica para confirmar la asistencia, como enviar los datos al servidor o actualizar el estado en una base de datos.
     // También puedes mostrar un mensaje de confirmación al usuario.
